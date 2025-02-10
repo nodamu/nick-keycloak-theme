@@ -4,7 +4,8 @@ import type { ClassKey } from "keycloakify/login";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
 import DefaultPage from "keycloakify/login/DefaultPage";
-import Template from "keycloakify/login/Template";
+import Template from "./Template";
+import LoginSMS from "./pages/LoginSMS";
 //import { twMerge } from "tailwind-merge";
 
 const UserProfileFormFields = lazy(
@@ -25,6 +26,13 @@ export default function KcPage(props: { kcContext: KcContext }) {
                 switch (kcContext.pageId) {
                     case "login.ftl": return (
                         <Login
+                            {...{ kcContext, i18n, classes }}
+                            Template={Template}
+                            doUseDefaultCss={true}
+                        />
+                    );
+                    case "login-sms.ftl": return (
+                        <LoginSMS
                             {...{ kcContext, i18n, classes }}
                             Template={Template}
                             doUseDefaultCss={true}

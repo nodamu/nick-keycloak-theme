@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 body.kcBodyClass {
-    @apply bg-[url(./assets/img/background.jpg)] bg-no-repeat bg-center bg-fixed;
+    @apply bg-[url(./assets/img/bkg.jpg)] bg-no-repeat bg-center bg-fixed;
     @apply font-geist;
 }
 
-.kcHeaderWrapperClass{
-    @apply text-3xl font-bold underline;
+#kc-header-wrapper {
+    @apply flex flex-row justify-center items-center;
 }

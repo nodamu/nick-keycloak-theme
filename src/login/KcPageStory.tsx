@@ -11,7 +11,14 @@ const kcContextExtension: KcContextExtension = {
         ...kcEnvDefaults
     }
 };
-const kcContextExtensionPerPage: KcContextExtensionPerPage = {};
+const kcContextExtensionPerPage: KcContextExtensionPerPage = {
+    "login-sms.ftl":{
+        url: {
+            loginAction: "#"
+        }
+        
+    }
+};
 
 export const { getKcContextMock } = createGetKcContextMock({
     kcContextExtension,
